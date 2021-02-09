@@ -5,6 +5,7 @@ import youtube from "../api/youtube";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
 
+
 class App extends React.Component {
     state = { videos: [], selectedVideo: null }
 
@@ -35,7 +36,7 @@ class App extends React.Component {
             <div className="ui container">
                 <SearchBar onFormSubmit={this.onTermSubmit} />
                 <br />
-                <div className="ui grid">
+                <div className="ui stackable grid">
                     <div className="ui row">
                         <div className="eleven wide column">
                             <VideoDetail video={this.state.selectedVideo} />
